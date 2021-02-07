@@ -8,7 +8,6 @@ pipeline {
             
             steps{
                 echo 'building the application'
-                sh 'npm install'
             }
         }
 
@@ -16,7 +15,6 @@ pipeline {
             
             steps{
                 echo 'testing the application'
-                sh 'pm2 start app.js'
             }
         }
 
