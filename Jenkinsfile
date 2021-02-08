@@ -10,7 +10,6 @@ pipeline {
                 echo 'building the application'
                 nodejs('basic-nodejs-15.8.0') {
                     sh 'npm install'
-                    sh 'npm build'
                 }
             }
         }
