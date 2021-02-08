@@ -8,6 +8,10 @@ pipeline {
             
             steps{
                 echo 'building the application'
+                nodejs('basic-nodejs-15.8.0') {
+                    sh 'npm install'
+                    sh 'npm build'
+                }
             }
         }
 
@@ -15,6 +19,9 @@ pipeline {
             
             steps{
                 echo 'testing the application'
+                nodejs('basic-nodejs-15.8.0') {
+                    sh 'pm2 start app.js'
+                }
             }
         }
 
